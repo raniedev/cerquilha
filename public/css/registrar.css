@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.registrar {
+    height: 100vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #eee;
+}
+
+.formulario-registrar{
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.formulario-registrar .titulo {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.formulario-registrar .titulo img {
+    width: 32px;
+    position: relative;
+    top: .5rem;
+}
+
+.content form .formulario-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+}
+
+form .formulario-info .divisor{
+    margin-bottom: 1rem;
+    width: calc(100% / 2 - 20px);
+}
+
+form .divisor span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.formulario-info .divisor input[type='text'],
+.formulario-info .divisor input[type='password'],
+.formulario-info .divisor input[type='email'],
+.formulario-info .divisor input[type='date'] {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.formulario-info .divisor input[type='password'],
+.formulario-info .div-senha input[type='text'],
+.formulario-info .div-senha input[type='text'] {
+    padding-left: 2.5rem;
+}
+
+.formulario-info .divisor input:focus {
+    border-color: #0073ff;
+}
+
+.formulario-info .div-senha .icone-olho {
+    position: relative;
+    bottom: 2.2rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.formulario-info .div-senha small,
+#label-usuario {
+    float: right;
+    opacity: 0;
+}
+
+form .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 ;
+    justify-content: space-between;
+}
+
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .button{
+    height: 45px;	
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #0073ff;
+    color: #0073ff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .button input:hover{
+    background: #0073ff;
+    color: #fff;
+}
+
+form .divisor .genero {
+    display: flex;
+}
+
+form .divisor .genero input:nth-child(1) {
+    accent-color: #0073ff;
+}
+
+form .divisor .genero input:nth-child(3) {
+    accent-color: #de3163;
+}
+
+form .divisor .genero label {
+    padding: .5rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+form p {
+    margin-top: .5rem;
+    text-align: center;
+}
+
+form a,
+form a:visited {
+    color: #0073ff;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.esconder {
+    opacity: 0;
+}
+
+.aparecer {
+    animation: Aparecer .5s ease-in forwards;
+}
+
+.esvair {
+    animation: Esvair .5s ease-out forwards;
+}
+
+@keyframes Aparecer {
+    from { opacity: 0;}
+    to { opacity: 1; }
+}
+
+@keyframes Esvair {
+    from { opacity: 1;}
+    to { opacity: 0; }
+}
+
+.msg-feedback {
+    position: fixed;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 10;
+    border-radius: 1rem;
+    padding: 0 .4rem 0 .2rem;
+    animation: Feedback .5s ease-in forwards;
+    animation-duration: 5s;
+}
+
+/* .msg-tamanho-grande {
+    width: 30rem;
+    left: calc(50% - 15rem);
+}
+
+.msg-tamanho-pequeno {
+    width: 20rem;
+    left: calc(50% - 10rem);
+} */
+
+.msg-erro {
+    background-color: #FB5151;
+}
+
+.msg-sucesso {
+    background-color: #4CBD4C;
+}
+
+@keyframes Feedback {
+    0% { 
+        opacity: 0;
+        top: 0;
+    }
+
+    5% {
+        opacity: 1; 
+        top: 1rem;
+    }
+
+    95% { 
+        opacity: 1; 
+        top: 1rem;
+    }
+
+    100% { 
+        opacity: 0;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .registrar {
+        height: 100%;
+    }
+
+    .formulario-registrar{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    form .formulario-info .divisor{
+        width: 100%;
+    }
+
+    form .category{
+        width: 100%;
+    }
+
+    .content form .formulario-info{
+        overflow-y: scroll;
+    }
+
+    .formulario-info::-webkit-scrollbar{
+        width: 5px;
+    }
+}
