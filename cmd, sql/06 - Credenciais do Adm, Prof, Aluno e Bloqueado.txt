@@ -1,0 +1,15 @@
+Administrador
+Email: cristiano@gmail.com, ruth@gmail.com
+Senha: ADMadm123
+
+Professor (Apenas 2 de exemplo)
+Email: kim@gmail.com, marta@gmail.com
+Senha: PROFprof123
+
+Alunos (Apenas 2 de exemplo)
+Email: fred@gmail.com, adriana@gmail.com
+Senha: USERuser123
+
+Bloqueados
+Email: deise@gmail.com, junior@gmail.com
+Senha: USERuser123

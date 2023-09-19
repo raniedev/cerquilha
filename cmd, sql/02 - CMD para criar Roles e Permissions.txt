@@ -1,0 +1,19 @@
+Comandos isolados sem atribuir as Permissions para as Roles
+
+php artisan permission:create-role admin
+php artisan permission:create-role prof
+php artisan permission:create-role aluno
+php artisan permission:create-role bloqueado
+
+php artisan permission:create-permission criar_postagens
+php artisan permission:create-permission enviar_videos
+php artisan permission:create-permission excluir_usuario
+php artisan permission:create-permission promover_cargo
+php artisan permission:create-permission revogar_cargo
+php artisan permission:create-permission interagir_postagens
+php artisan permission:create-permission interagir_videos
+
+
+Seeder que vai criar as Roles e Permissions e atribuir cada uma delas a sua devida Role
+
+php artisan db:seed --class=RoleSeeder
